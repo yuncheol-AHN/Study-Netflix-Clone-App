@@ -12,11 +12,18 @@
 		DB31AD4A2986E72B00578E53 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB31AD492986E72B00578E53 /* SearchViewController.swift */; };
 		DB31AD4C2986E74A00578E53 /* DownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB31AD4B2986E74A00578E53 /* DownloadsViewController.swift */; };
 		DB31AD53298832B100578E53 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB31AD52298832B100578E53 /* CollectionViewTableViewCell.swift */; };
+		DB31AD55298980C600578E53 /* HeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB31AD54298980C600578E53 /* HeaderUIView.swift */; };
+		DB31AD57298B65C400578E53 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB31AD56298B65C400578E53 /* APICaller.swift */; };
 		DB74945728F5B9720062EE54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB74945628F5B9720062EE54 /* AppDelegate.swift */; };
 		DB74945928F5B9720062EE54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB74945828F5B9720062EE54 /* SceneDelegate.swift */; };
 		DB74945B28F5B9720062EE54 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB74945A28F5B9720062EE54 /* MainTabBarViewController.swift */; };
 		DB74946028F5B9740062EE54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB74945F28F5B9740062EE54 /* Assets.xcassets */; };
 		DB74946328F5B9740062EE54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB74946128F5B9740062EE54 /* LaunchScreen.storyboard */; };
+		DBBB95D229A7A28E00559790 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBB95D129A7A28E00559790 /* Title.swift */; };
+		DBBB95D629A7B3F000559790 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBB95D529A7B3F000559790 /* Extensions.swift */; };
+		DBBB95DA29AE4C5E00559790 /* TitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBB95D929AE4C5E00559790 /* TitleCollectionViewCell.swift */; };
+		DBBB95DC29B0625A00559790 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBB95DB29B0625A00559790 /* Extension.swift */; };
+		DBBB95DE29B062F100559790 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBBB95DD29B062F100559790 /* Secrets.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +32,8 @@
 		DB31AD492986E72B00578E53 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		DB31AD4B2986E74A00578E53 /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
 		DB31AD52298832B100578E53 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
+		DB31AD54298980C600578E53 /* HeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderUIView.swift; sourceTree = "<group>"; };
+		DB31AD56298B65C400578E53 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		DB74945328F5B9720062EE54 /* Study-Netflix-Clone-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Study-Netflix-Clone-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB74945628F5B9720062EE54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB74945828F5B9720062EE54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +41,11 @@
 		DB74945F28F5B9740062EE54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB74946228F5B9740062EE54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB74946428F5B9740062EE54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBBB95D129A7A28E00559790 /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
+		DBBB95D529A7B3F000559790 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		DBBB95D929AE4C5E00559790 /* TitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionViewCell.swift; sourceTree = "<group>"; };
+		DBBB95DB29B0625A00559790 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		DBBB95DD29B062F100559790 /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +74,8 @@
 			isa = PBXGroup;
 			children = (
 				DB31AD52298832B100578E53 /* CollectionViewTableViewCell.swift */,
+				DB31AD54298980C600578E53 /* HeaderUIView.swift */,
+				DBBB95D929AE4C5E00559790 /* TitleCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -74,6 +90,7 @@
 		DB31AD4F2988319D00578E53 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DBBB95D129A7A28E00559790 /* Title.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -81,6 +98,7 @@
 		DB31AD50298831CA00578E53 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DBBB95D529A7B3F000559790 /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -88,6 +106,9 @@
 		DB31AD51298831D200578E53 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				DB31AD56298B65C400578E53 /* APICaller.swift */,
+				DBBB95DB29B0625A00559790 /* Extension.swift */,
+				DBBB95DD29B062F100559790 /* Secrets.plist */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -185,6 +206,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBBB95DE29B062F100559790 /* Secrets.plist in Resources */,
 				DB74946328F5B9740062EE54 /* LaunchScreen.storyboard in Resources */,
 				DB74946028F5B9740062EE54 /* Assets.xcassets in Resources */,
 			);
@@ -198,11 +220,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB31AD4A2986E72B00578E53 /* SearchViewController.swift in Sources */,
+				DBBB95DA29AE4C5E00559790 /* TitleCollectionViewCell.swift in Sources */,
+				DBBB95D229A7A28E00559790 /* Title.swift in Sources */,
 				DB74945B28F5B9720062EE54 /* MainTabBarViewController.swift in Sources */,
 				DB31AD53298832B100578E53 /* CollectionViewTableViewCell.swift in Sources */,
+				DB31AD55298980C600578E53 /* HeaderUIView.swift in Sources */,
 				DB31AD4C2986E74A00578E53 /* DownloadsViewController.swift in Sources */,
+				DB31AD57298B65C400578E53 /* APICaller.swift in Sources */,
+				DBBB95D629A7B3F000559790 /* Extensions.swift in Sources */,
 				DB74945728F5B9720062EE54 /* AppDelegate.swift in Sources */,
 				DB74945928F5B9720062EE54 /* SceneDelegate.swift in Sources */,
+				DBBB95DC29B0625A00559790 /* Extension.swift in Sources */,
 				DB31AD482986E6E900578E53 /* UpcomingViewController.swift in Sources */,
 				DB31AD462986E6A000578E53 /* HomeViewController.swift in Sources */,
 			);
