@@ -15,6 +15,8 @@ class CollectionViewTableViewCell: UITableViewCell {
     // 인스턴스 위에서 타입 프로퍼티 사용불가
     static let identifier = "CollectionViewTableViewCell"
     
+    private var titles: [Title] = [Title]()
+    
     private let collectionView: UICollectionView = {
         
         let layout = UICollectionViewFlowLayout()
@@ -22,7 +24,7 @@ class CollectionViewTableViewCell: UITableViewCell {
         layout.itemSize = CGSize(width: 140, height: 200)
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.register(TitleCollectionViewCell.self, forCellWithReuseIdentifier: TitleCollectionViewCell.identifier)
         
         return collectionView
     }()
@@ -49,20 +51,33 @@ class CollectionViewTableViewCell: UITableViewCell {
         
         collectionView.frame = contentView.bounds
     }
+    
+    public func configure(with titles: [Title]) {
+        
+        self.titles = titles
+        
+        DispatchQueue.main.async { [weak self] in
+            self?.collectionView.reloadData()
+        }
+    }
 }
 
 extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TitleCollectionViewCell.identifier, for: indexPath) as? TitleCollectionViewCell else { return UICollectionViewCell() }
         cell.backgroundColor = .systemGreen
+        
+        
+        guard let poster_url = titles[indexPath.row].poster_path else { return UICollectionViewCell() }
+        cell.configure(with: "https://image.tmdb.org/t/p/w500/\(poster_url)")
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 10
+        return titles.count
     }
 }
