@@ -17,6 +17,8 @@
 		DB31AD57298B65C400578E53 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB31AD56298B65C400578E53 /* APICaller.swift */; };
 		DB43D6B329B612DD00597212 /* UpcomingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB43D6B229B612DD00597212 /* UpcomingTableViewCell.swift */; };
 		DB43D6B529BDBEC400597212 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB43D6B429BDBEC400597212 /* SearchTableViewCell.swift */; };
+		DB43D6B729BF601F00597212 /* TitleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB43D6B629BF601F00597212 /* TitleViewModel.swift */; };
+		DB43D6B929BF64EE00597212 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB43D6B829BF64EE00597212 /* SearchResultsViewController.swift */; };
 		DB74945728F5B9720062EE54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB74945628F5B9720062EE54 /* AppDelegate.swift */; };
 		DB74945928F5B9720062EE54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB74945828F5B9720062EE54 /* SceneDelegate.swift */; };
 		DB74945B28F5B9720062EE54 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB74945A28F5B9720062EE54 /* MainTabBarViewController.swift */; };
@@ -42,6 +44,8 @@
 		DB31AD56298B65C400578E53 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		DB43D6B229B612DD00597212 /* UpcomingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingTableViewCell.swift; sourceTree = "<group>"; };
 		DB43D6B429BDBEC400597212 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		DB43D6B629BF601F00597212 /* TitleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewModel.swift; sourceTree = "<group>"; };
+		DB43D6B829BF64EE00597212 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		DB74945328F5B9720062EE54 /* Study-Netflix-Clone-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Study-Netflix-Clone-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB74945628F5B9720062EE54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB74945828F5B9720062EE54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,10 +92,12 @@
 		DB31AD442986E67C00578E53 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DB74945A28F5B9720062EE54 /* MainTabBarViewController.swift */,
 				DB31AD452986E6A000578E53 /* HomeViewController.swift */,
 				DB31AD472986E6E900578E53 /* UpcomingViewController.swift */,
 				DB31AD492986E72B00578E53 /* SearchViewController.swift */,
 				DB31AD4B2986E74A00578E53 /* DownloadsViewController.swift */,
+				DB43D6B829BF64EE00597212 /* SearchResultsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -111,6 +117,7 @@
 		DB31AD4E2988319700578E53 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				DB43D6B629BF601F00597212 /* TitleViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -170,7 +177,6 @@
 				DB31AD442986E67C00578E53 /* Controllers */,
 				DB74945628F5B9720062EE54 /* AppDelegate.swift */,
 				DB74945828F5B9720062EE54 /* SceneDelegate.swift */,
-				DB74945A28F5B9720062EE54 /* MainTabBarViewController.swift */,
 				DB74945F28F5B9740062EE54 /* Assets.xcassets */,
 				DB74946128F5B9740062EE54 /* LaunchScreen.storyboard */,
 				DB74946428F5B9740062EE54 /* Info.plist */,
@@ -300,8 +306,10 @@
 				DB31AD53298832B100578E53 /* CollectionViewTableViewCell.swift in Sources */,
 				DB31AD55298980C600578E53 /* HeaderUIView.swift in Sources */,
 				DB31AD4C2986E74A00578E53 /* DownloadsViewController.swift in Sources */,
+				DB43D6B929BF64EE00597212 /* SearchResultsViewController.swift in Sources */,
 				DB43D6B329B612DD00597212 /* UpcomingTableViewCell.swift in Sources */,
 				DB31AD57298B65C400578E53 /* APICaller.swift in Sources */,
+				DB43D6B729BF601F00597212 /* TitleViewModel.swift in Sources */,
 				DBBB95D629A7B3F000559790 /* Extensions.swift in Sources */,
 				DB74945728F5B9720062EE54 /* AppDelegate.swift in Sources */,
 				DB74945928F5B9720062EE54 /* SceneDelegate.swift in Sources */,

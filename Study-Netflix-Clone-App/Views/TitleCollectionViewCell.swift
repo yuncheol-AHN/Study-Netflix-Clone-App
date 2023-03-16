@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class TitleCollectionViewCell: UICollectionViewCell {
     
@@ -24,6 +25,7 @@ class TitleCollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
         
         contentView.addSubview(posterImageView)
+        
     }
     
     // 지정 생성자를 직접 구현했을 때만 필수적, NSCoding Protocol에 구현되어 있음, UIView: NSCodig임
@@ -36,5 +38,11 @@ class TitleCollectionViewCell: UICollectionViewCell {
         super.layoutSubviews()
         
         posterImageView.frame = contentView.bounds
+    }
+    
+    public func configure(with model: String) {
+        
+        guard let url = URL(string: model) else { return }
+        posterImageView.sd_setImage(with: url)
     }
 }

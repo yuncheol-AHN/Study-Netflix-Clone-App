@@ -74,7 +74,7 @@ extension UpcomingViewController: UITableViewDelegate, UITableViewDataSource {
         let image_url = titles[indexPath.row].poster_path ?? "EMPTY"
         let title = titles[indexPath.row].original_title ?? "EMPTY"
         
-        cell.configure(image_url: image_url, title: title)
+        cell.configure(model: TitleViewModel(poster_url: image_url, titleName: title))
         
         return cell
     }

@@ -7,6 +7,14 @@
 
 import UIKit
 
+enum Sections: Int {
+    case TrendingMovies = 0
+    case TrendingTvs = 1
+    case PopularMovies = 2
+    case UpcomingMovies = 3
+    case TopRatedMovies = 4
+}
+
 class HomeViewController: UIViewController {
     
     let moviesTitles: [String] = ["Trending Movies", "Trending Tv", "Popular", "Upcoming Movies", "Top Rated"]
@@ -20,21 +28,18 @@ class HomeViewController: UIViewController {
     }()
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-        
         view.backgroundColor = .systemBackground
+        
         view.addSubview(homeFeedTable)
-        
         homeFeedTable.tableHeaderView = HeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
-        // homeFeedTable.tableHeaderView?.backgroundColor = .systemGray
-        // homeFeedTable.tableFooterView = UIView(frame: CGRect(x: 0, y: view.bounds.height, width: view.bounds.height, height: 450))
-        
-        configureNavigationBar()
         
         homeFeedTable.delegate = self
         homeFeedTable.dataSource = self
         
-        fetchData()
+        configureNavigationBar()
+        // fetchData()
     }
     
     private func fetchData() {
@@ -122,8 +127,68 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CollectionViewTableViewCell.identifier, for: indexPath) as? CollectionViewTableViewCell else {
-            
             return UITableViewCell()
+        }
+        
+        switch indexPath.section {
+            
+        case Sections.TrendingMovies.rawValue:  // 0
+            
+            APICaller.shared.getTrendingMovies { result in
+                switch result {
+                case .success(let data):
+                    print("trending movies", data[0].original_title ?? "NONE")
+                    cell.configure(with: data)
+                case .failure(let err):
+                    print(err)
+                }
+            }
+        case Sections.TrendingTvs.rawValue: // 1
+            
+            APICaller.shared.getTrendingTvs { result in
+                switch result {
+                case .success(let data):
+                    print("trending tvs", data[0].original_title ?? "NONE")
+                    cell.configure(with: data)
+                case .failure(let err):
+                    print(err)
+                }
+            }
+        case Sections.PopularMovies.rawValue:   // 2
+            
+            APICaller.shared.getPopularMovies { result in
+                switch result {
+                case .success(let data):
+                    print("popular movies", data[0].original_title ?? "NONE")
+                    cell.configure(with: data)
+                case .failure(let err):
+                    print(err)
+                }
+            }
+        case Sections.UpcomingMovies.rawValue:  // 3
+            
+            APICaller.shared.getUpcomingMovies { result in
+                switch result {
+                case .success(let data):
+                    print("upcoming movies", data[0].original_title ?? "NONE")
+                    cell.configure(with: data)
+                case .failure(let err):
+                    print(err)
+                }
+            }
+        case Sections.TopRatedMovies.rawValue:
+            
+            APICaller.shared.getTopRatedMovies { result in
+                switch result {
+                case .success(let data):
+                    print("top rated movies", data[0].original_title ?? "NONE")
+                    cell.configure(with: data)
+                case .failure(let err):
+                    print(err)
+                }
+            }
+        default:
+            break
         }
                 
         return cell
