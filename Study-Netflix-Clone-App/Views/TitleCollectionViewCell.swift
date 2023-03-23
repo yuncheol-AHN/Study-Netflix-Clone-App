@@ -25,7 +25,6 @@ class TitleCollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
         
         contentView.addSubview(posterImageView)
-        
     }
     
     // 지정 생성자를 직접 구현했을 때만 필수적, NSCoding Protocol에 구현되어 있음, UIView: NSCodig임
