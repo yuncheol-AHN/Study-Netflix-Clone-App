@@ -39,55 +39,6 @@ class HomeViewController: UIViewController {
         homeFeedTable.dataSource = self
         
         configureNavigationBar()
-        // fetchData()
-    }
-    
-    private func fetchData() {
-        
-        APICaller.shared.getTrendingMovies { result in
-            switch result {
-            case .success(let data):
-                print("trending movies", data[0].original_title ?? "NONE")
-            case .failure(let err):
-                print(err)
-            }
-        }
-        
-        APICaller.shared.getTrendingTvs { result in
-            switch result {
-            case .success(let data):
-                print("trending tvs", data[0].original_name ?? "NONE")
-            case .failure(let err):
-                print(err)
-            }
-        }
-        
-        APICaller.shared.getPopularMovies { result in
-            switch result {
-            case .success(let data):
-                print("popular movies", data[0].original_title ?? "NONE")
-            case .failure(let err):
-                print(err)
-            }
-        }
-        
-        APICaller.shared.getTopRatedMovies { result in
-            switch result {
-            case .success(let data):
-                print("top rated movies", data[0].original_title ?? "NONE")
-            case .failure(let err):
-                print(err)
-            }
-        }
-        
-        APICaller.shared.getUpcomingMovies { result in
-            switch result {
-            case .success(let data):
-                print("upcoming movies", data[0].original_title ?? "NONE")
-            case .failure(let err):
-                print(err)
-            }
-        }
     }
     
     override func viewDidLayoutSubviews() {
@@ -118,17 +69,20 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-                
+        
         return 1
     }
     
-    // indexPath : [section, row], 화면에 Cell이 나타날 때 실행된다.
+    // indexPath : [section, row]
+    // 'cellForRowAt:' method는 화면에 cell이 나타날 때 실행된다.
     // 화면에서 사라지는 cell은 화면 -> queue로, 나타나는 cell은 queue -> 화면으로
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CollectionViewTableViewCell.identifier, for: indexPath) as? CollectionViewTableViewCell else {
             return UITableViewCell()
         }
+        
+        cell.delegate = self
         
         switch indexPath.section {
             
@@ -232,3 +186,14 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+extension HomeViewController: CollectionViewTableViewCellDelegate {
+    
+    func collectionViewTableViewCellDidTapCell(_ cell: CollectionViewTableViewCell, viewModel: DetailViewModel) {
+        DispatchQueue.main.async { [weak self] in
+            let vc = DetailViewController()
+            vc.configure(with: viewModel)
+            
+            self?.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+}

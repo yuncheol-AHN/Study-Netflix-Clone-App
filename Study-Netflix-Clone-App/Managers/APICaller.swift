@@ -151,8 +151,8 @@ class APICaller {
     func search(with query: String, completion: @escaping (Result<[Title], Error>) -> Void) {
         
         // https://api.themoviedb.org/3/search/movie?api_key={api_key}&query=Jack+Reacher
-        
-        guard let query = query.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else { return }
+        // addingPercentEncoding 특수 문자, 한글 등등 URL에 포함 가능하게 도와줌
+        guard let query = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return }
         guard let url = URL(string: "\(Constants.base_URL)/3/search/movie?api_key=\(Bundle.main.TMDB_API_KEY)&query=\(query)") else { return }
         
         let task = URLSession.shared.dataTask(with: url) { data, _, error in
@@ -166,6 +166,29 @@ class APICaller {
             } catch {
                 
                 completion(.failure(error))
+            }
+        }
+        
+        task.resume()
+    }
+    
+    func getMovie(with query: String, completion: @escaping (Result<VideoElement, Error>) -> Void) {
+        
+        guard let query = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return }
+        guard let url = URL(string: "\(Constants.YoutubeBase_URL)q=\(query)&key=\(Constants.YoutubeAPI_KEY)") else { return }
+        
+        let task = URLSession.shared.dataTask(with: url) { data, _, error in
+            
+            // error check, data 옵셔널 벗기기
+            guard let data = data, error == nil else { return }
+            
+            // do {} catch {}
+            do {
+                let results = try JSONDecoder().decode(YoutubeSearchResponse.self, from: data)
+                completion(.success(results.items[0]))
+                
+            } catch {
+                print("get Movie error")
             }
         }
         
