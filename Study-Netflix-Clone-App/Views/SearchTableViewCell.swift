@@ -14,6 +14,7 @@ class SearchTableViewCell: UITableViewCell {
     private let searchImage: UIImageView = {
         
         let imageView = UIImageView()
+        imageView
         
         return imageView
     }()

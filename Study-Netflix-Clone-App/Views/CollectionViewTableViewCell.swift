@@ -7,20 +7,13 @@
 
 import UIKit
 
-protocol CollectionViewTableViewCellDelegate: AnyObject {
-    
-    func collectionViewTableViewCellDidTapCell(_ cell: CollectionViewTableViewCell, viewModel: DetailViewModel)
-}
-
-// cell을 만들 때, init(), layoutSubviews() 생성
+// cell을 만들 때, init을 생성해야함
 class CollectionViewTableViewCell: UITableViewCell {
     
     // 인스턴스 프로퍼티 vs 스태틱(타입) 프로퍼티 : 인스턴스 생성후 사용가능 vs 인스턴스 생성없이 사용가능
     // static(오버라이딩 불가) -> class(오버라이딩 가능) 대체 가능
     // 인스턴스 위에서 타입 프로퍼티 사용불가
     static let identifier = "CollectionViewTableViewCell"
-    
-    weak var delegate: CollectionViewTableViewCellDelegate?
     
     private var titles: [Title] = [Title]()
     
@@ -64,7 +57,6 @@ class CollectionViewTableViewCell: UITableViewCell {
         self.titles = titles
         
         DispatchQueue.main.async { [weak self] in
-            // reloadData() call 'cellForItemAt:', 'numberOfItemsInSection:' methods
             self?.collectionView.reloadData()
         }
     }
@@ -87,31 +79,5 @@ extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         return titles.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        collectionView.deselectItem(at: indexPath, animated: true)
-        
-        let title = titles[indexPath.row]
-        guard let titleName = title.original_title ?? title.original_name else {
-            return
-        }
-        
-        APICaller.shared.getMovie(with: titleName + " trailer") { [weak self] result in
-            
-            switch result {
-            case .success(let videoElement):
-                
-                let title = self?.titles[indexPath.row].original_title ?? self?.titles[indexPath.row].original_name
-                guard let titleOverview = self?.titles[indexPath.row].overview else { return }
-                let viewModel = DetailViewModel(title: title ?? " ", titleOverview: titleOverview, youtubeView: videoElement)
-                guard let strongSelf = self else { return }
-                
-                self?.delegate?.collectionViewTableViewCellDidTapCell(strongSelf, viewModel: viewModel)
-            case .failure(let err):
-                print(err)
-            }
-        }
     }
 }
