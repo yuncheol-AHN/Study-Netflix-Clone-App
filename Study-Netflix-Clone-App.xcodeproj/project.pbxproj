@@ -98,13 +98,8 @@
 		DB31AD442986E67C00578E53 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DB74945A28F5B9720062EE54 /* MainTabBarViewController.swift */,
-				DB31AD452986E6A000578E53 /* HomeViewController.swift */,
-				DB31AD472986E6E900578E53 /* UpcomingViewController.swift */,
-				DB31AD492986E72B00578E53 /* SearchViewController.swift */,
-				DB31AD4B2986E74A00578E53 /* DownloadsViewController.swift */,
-				DB43D6B829BF64EE00597212 /* SearchResultsViewController.swift */,
-				DB43D6BE29C4AD3000597212 /* DetailViewController.swift */,
+				DB43D6C329CCAB9200597212 /* Core */,
+				DB43D6C229CCAB8100597212 /* General */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -155,6 +150,27 @@
 				DBBB95DD29B062F100559790 /* Secrets.plist */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		DB43D6C229CCAB8100597212 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				DB43D6B829BF64EE00597212 /* SearchResultsViewController.swift */,
+				DB43D6BE29C4AD3000597212 /* DetailViewController.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		DB43D6C329CCAB9200597212 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				DB74945A28F5B9720062EE54 /* MainTabBarViewController.swift */,
+				DB31AD452986E6A000578E53 /* HomeViewController.swift */,
+				DB31AD472986E6E900578E53 /* UpcomingViewController.swift */,
+				DB31AD492986E72B00578E53 /* SearchViewController.swift */,
+				DB31AD4B2986E74A00578E53 /* DownloadsViewController.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		DB74944A28F5B9720062EE54 = {

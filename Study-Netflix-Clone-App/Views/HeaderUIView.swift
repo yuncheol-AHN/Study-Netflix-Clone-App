@@ -31,12 +31,12 @@ class HeaderUIView: UIView {
         return btn
     }()
     
-    private let card: UIView = {
+    private let card: UIImageView = {
         
         let imageView = UIImageView()
         imageView.contentMode = .scaleToFill
         imageView.clipsToBounds = true
-        imageView.image = UIImage(named: "Avengers")
+        // imageView.image = UIImage(named: "Avengers")
         
         return imageView
     }()
@@ -79,5 +79,12 @@ class HeaderUIView: UIView {
     required init?(coder: NSCoder) {
         
         fatalError()
+    }
+    
+    public func configure(with model: TitleViewModel) {
+        
+        guard let url = URL(string: "https://image.tmdb.org/t/p/w500/\(model.poster_url)") else { return }
+        
+        card.sd_setImage(with: url)
     }
 }

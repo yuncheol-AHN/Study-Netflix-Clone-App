@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol UpcomingTableViewCellDelegate: AnyObject {
+    
+    func UpcomingTableViewCellDidTapped(_ model: DetailViewModel)
+}
+
 class UpcomingTableViewCell: UITableViewCell {
     
     static let identifier = "UpcomingTableViewCell"
