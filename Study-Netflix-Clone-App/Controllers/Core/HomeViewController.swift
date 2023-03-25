@@ -17,6 +17,9 @@ enum Sections: Int {
 
 class HomeViewController: UIViewController {
     
+    private var randomTrendingMovie: Title?
+    private var headerView: HeaderUIView?
+    
     let moviesTitles: [String] = ["Trending Movies", "Trending Tv", "Popular", "Upcoming Movies", "Top Rated"]
     
     private let homeFeedTable: UITableView = {
@@ -33,13 +36,36 @@ class HomeViewController: UIViewController {
         view.backgroundColor = .systemBackground
         
         view.addSubview(homeFeedTable)
-        homeFeedTable.tableHeaderView = HeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
+        headerView = .init(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
+        homeFeedTable.tableHeaderView = headerView
         
         homeFeedTable.delegate = self
         homeFeedTable.dataSource = self
         
         configureNavigationBar()
+        configureHeroHeaderView()
     }
+    
+    private func configureHeroHeaderView() {
+        
+        APICaller.shared.getTrendingMovies { [weak self] result in
+            switch result {
+            case .success(let titles):
+                
+                let selectedTitle = titles.randomElement()
+                
+                guard let titleName = selectedTitle?.original_title ?? selectedTitle?.original_name else { return }
+                let url = selectedTitle?.poster_path ?? " "
+                
+                self?.randomTrendingMovie = selectedTitle
+                self?.headerView?.configure(with: TitleViewModel(poster_url: url, titleName: titleName))
+            case .failure(let error):
+                
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
     
     override func viewDidLayoutSubviews() {
         
@@ -91,7 +117,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             APICaller.shared.getTrendingMovies { result in
                 switch result {
                 case .success(let data):
-                    print("trending movies", data[0].original_title ?? "NONE")
                     cell.configure(with: data)
                 case .failure(let err):
                     print(err)
@@ -168,9 +193,15 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         navigationController?.navigationBar.transform = .init(translationX: 0, y: min(0, -offset))
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    // titleForHeaderInSection vs viewForHeaderInSection
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
-        return moviesTitles[section]
+        let label = UILabel()
+        
+        label.text = moviesTitles[section]
+        label.textColor = UIColor(named: "basicTextColor")
+        
+        return label
     }
     
     // cell이 등장할 때 실행, view는 cell's header, section은 index

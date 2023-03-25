@@ -33,8 +33,8 @@ class DetailViewController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .systemFont(ofSize: 18, weight: .regular)
-        label.numberOfLines = .max
-        label.text = "balbalbalbalbalbalablablab dddasdfbwaerbawtbdfbgdaszgfvbaswfvawevrwaevtdtgbzfdbsafbwetb"
+        label.lineBreakMode = .byWordWrapping
+        label.numberOfLines = .zero
         
         return label
     }()
@@ -78,7 +78,8 @@ class DetailViewController: UIViewController {
         
         let overViewLabelConstraints = [
             overViewLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 15),
-            overViewLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15)
+            overViewLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
+            overViewLabel.widthAnchor.constraint(equalToConstant: view.bounds.width)
         ]
         
         let downloadButtonConstraints = [
@@ -100,6 +101,7 @@ class DetailViewController: UIViewController {
         overViewLabel.text = model.titleOverview
         
         guard let url = URL(string: "https://www.youtube.com/embed/\(model.youtubeView.id.videoId)") else { return }
+        
         webView.load(URLRequest(url: url))
     }
 }

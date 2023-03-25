@@ -11,6 +11,7 @@ class SearchViewController: UIViewController {
     
     private var titles = [Title]()
     
+    /*
     private let searchTableView: UITableView = {
         
         let tableView = UITableView()
@@ -18,6 +19,7 @@ class SearchViewController: UIViewController {
         
         return tableView
     }()
+    */
     
     private let searchController: UISearchController = {
         
@@ -32,27 +34,28 @@ class SearchViewController: UIViewController {
         
         super.viewDidLoad()
         
-        view.addSubview(searchTableView)
+        // view.addSubview(searchTableView)
         
-        searchTableView.delegate = self
-        searchTableView.dataSource = self
+        // searchTableView.delegate = self
+        // searchTableView.dataSource = self
         
         navigationItem.searchController = searchController
         navigationController?.navigationBar.tintColor = .white
         
         view.backgroundColor = .systemBackground
         
-        fetchDiscoverMovies()
+        // fetchDiscoverMovies()
         searchController.searchResultsUpdater = self
     }
     
     override func viewDidLayoutSubviews() {
         
         super.viewDidLayoutSubviews()
-        searchTableView.frame = view.bounds
+        // searchTableView.frame = view.bounds
         
     }
     
+    /*
     func fetchDiscoverMovies() {
         APICaller.shared.getDiscoverMovies { result in
             switch result {
@@ -60,15 +63,17 @@ class SearchViewController: UIViewController {
                 self.titles = titles
                 DispatchQueue.main.async {
                     
-                    self.searchTableView.reloadData()
+                    // self.searchTableView.reloadData()
                 }
             case .failure(let err):
                 print(err)
             }
         }
     }
+    */
 }
 
+/*
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -93,8 +98,9 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         return 140
     }
 }
+*/
 
-extension SearchViewController: UISearchResultsUpdating {
+extension SearchViewController: UISearchResultsUpdating, SearchResultsViewControllerDelegate {
     
     func updateSearchResults(for searchController: UISearchController) {
         
@@ -104,6 +110,8 @@ extension SearchViewController: UISearchResultsUpdating {
               !query.trimmingCharacters(in: .whitespaces).isEmpty,
               query.trimmingCharacters(in: .whitespaces).count >= 3,
               let resultController = searchController.searchResultsController as? SearchResultsViewController else { return }
+        
+        resultController.delegate = self
         
         APICaller.shared.search(with: query) { result in
             DispatchQueue.main.async {
@@ -115,6 +123,15 @@ extension SearchViewController: UISearchResultsUpdating {
                     print(error)
                 }
             }
+        }
+    }
+    
+    func searchResultsViewControllerDidTapped(_ model: DetailViewModel) {
+        DispatchQueue.main.async {
+            let vc = DetailViewController()
+            vc.configure(with: model)
+            
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
 }
