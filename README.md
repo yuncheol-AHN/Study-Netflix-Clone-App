@@ -1,6 +1,10 @@
 Study Netflix Clone🍿
 ===================
 
+👨🏻‍💻 해당 프로젝트를 통해 학습하고, 배운것들<br/>
+https://www.notion.so/Netflix-Clone-187cafc9c70a4d74aa8778d530e47d8b<br/>
+
+----
 Why?
 ----
 - 해당 프로젝트를 통해 일반적인 앱의 구성을 파악하기 위해(MVC, MVVM 등)
