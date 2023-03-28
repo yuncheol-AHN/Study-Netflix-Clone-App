@@ -2,7 +2,7 @@ Study Netflix Clone🍿
 ===================
 
 👨🏻‍💻 해당 프로젝트를 통해 학습하고, 배운것들<br/>
-https://www.notion.so/Netflix-Clone-187cafc9c70a4d74aa8778d530e47d8b<br/>
+https://pleasant-gasoline-2d7.notion.site/Netflix-Clone-187cafc9c70a4d74aa8778d530e47d8b<br/>
 
 ----
 Why?
