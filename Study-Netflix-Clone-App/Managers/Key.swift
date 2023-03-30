@@ -9,9 +9,8 @@ import Foundation
 
 struct Constants {
     
-    static let base_URL = "https://api.themoviedb.org"
-    static let YoutubeBase_URL = "https://youtube.googleapis.com/youtube/v3/search?"
-    static let YoutubeAPI_KEY = "AIzaSyCXicAaBEHeqeuh4M41S6GmK52C3LyemBw"
+    static let TMDB_base_URL = "https://api.themoviedb.org"
+    static let Youtube_Base_URL = "https://youtube.googleapis.com/youtube/v3/search?"
 }
 
 extension Bundle {
@@ -25,6 +24,17 @@ extension Bundle {
         guard let key = resource["TMDB_API_KEY"] as? String else {
             fatalError()
         }
+        
+        return key
+    }
+    
+    var Youtube_API_KEY: String {
+        
+        guard let file = self.path(forResource: "Secrets", ofType: "plist") else { return "" }
+        
+        guard let resource = NSDictionary(contentsOfFile: file) else { return "" }
+        
+        guard let key = resource["Youtube_API_KEY"] as? String else { fatalError() }
         
         return key
     }

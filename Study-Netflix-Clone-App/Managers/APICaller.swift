@@ -20,9 +20,8 @@ class APICaller {
     func getTrendingMovies(completion: @escaping (Result<[Title], Error>) -> Void) {
         
         // URLRequest : HTTP Method, body
-        guard let url = URL(string: "\(Constants.base_URL)/3/trending/movie/day?api_key=\(Bundle.main.TMDB_API_KEY)") else { return }
-        // https://openapi.naver.com/v1/search/image?query=qi9r5xBgcc9KTxlOLjssEbDgO0J.jpg
-        //
+        guard let url = URL(string: "\(Constants.TMDB_base_URL)/3/trending/movie/day?api_key=\(Bundle.main.TMDB_API_KEY)") else { return }
+
         // let session = URLSession(configuration: .default)
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             
@@ -44,7 +43,7 @@ class APICaller {
     
     func getTrendingTvs(completion: @escaping (Result<[Title], Error>) -> Void) {
         
-        guard let url = URL(string: "\(Constants.base_URL)/3/trending/tv/day?api_key=\(Bundle.main.TMDB_API_KEY)") else { return }
+        guard let url = URL(string: "\(Constants.TMDB_base_URL)/3/trending/tv/day?api_key=\(Bundle.main.TMDB_API_KEY)") else { return }
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             
@@ -65,7 +64,7 @@ class APICaller {
     
     func getUpcomingMovies(completion: @escaping (Result<[Title], Error>) -> Void) {
         
-        guard let url = URL(string: "\(Constants.base_URL)/3/movie/upcoming?api_key=\(Bundle.main.TMDB_API_KEY)") else { return }
+        guard let url = URL(string: "\(Constants.TMDB_base_URL)/3/movie/upcoming?api_key=\(Bundle.main.TMDB_API_KEY)") else { return }
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             
@@ -86,7 +85,7 @@ class APICaller {
     
     func getPopularMovies(completion: @escaping (Result<[Title], Error>) -> Void) {
         
-        guard let url = URL(string: "\(Constants.base_URL)/3/movie/popular?api_key=\(Bundle.main.TMDB_API_KEY)") else { return }
+        guard let url = URL(string: "\(Constants.TMDB_base_URL)/3/movie/popular?api_key=\(Bundle.main.TMDB_API_KEY)") else { return }
         
         let task = URLSession.shared.dataTask(with: url) { data, _, error in
             
@@ -107,7 +106,7 @@ class APICaller {
     
     func getTopRatedMovies(completion: @escaping (Result<[Title], Error>) -> Void) {
         
-        guard let url = URL(string: "\(Constants.base_URL)/3/movie/top_rated?api_key=\(Bundle.main.TMDB_API_KEY)") else { return }
+        guard let url = URL(string: "\(Constants.TMDB_base_URL)/3/movie/top_rated?api_key=\(Bundle.main.TMDB_API_KEY)") else { return }
         
         let task = URLSession.shared.dataTask(with: url) { data, _, error in
             
@@ -129,7 +128,7 @@ class APICaller {
     func getDiscoverMovies(completion: @escaping (Result<[Title], Error>) -> Void) {
         
         
-        guard let url = URL(string: "\(Constants.base_URL)/3/discover/movie?api_key=\(Bundle.main.TMDB_API_KEY)&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate") else { return }
+        guard let url = URL(string: "\(Constants.TMDB_base_URL)/3/discover/movie?api_key=\(Bundle.main.TMDB_API_KEY)&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate") else { return }
         
         let task = URLSession.shared.dataTask(with: url) { data, _, error in
             
@@ -154,7 +153,7 @@ class APICaller {
         // https://api.themoviedb.org/3/search/movie?api_key={api_key}&query=Jack+Reacher
         // addingPercentEncoding 특수 문자, 한글 등등 URL에 포함 가능하게 도와줌
         guard let query = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return }
-        guard let url = URL(string: "\(Constants.base_URL)/3/search/movie?api_key=\(Bundle.main.TMDB_API_KEY)&query=\(query)") else { return }
+        guard let url = URL(string: "\(Constants.TMDB_base_URL)/3/search/movie?api_key=\(Bundle.main.TMDB_API_KEY)&query=\(query)") else { return }
         
         let task = URLSession.shared.dataTask(with: url) { data, _, error in
             
@@ -176,7 +175,7 @@ class APICaller {
     func getMovie(with query: String, completion: @escaping (Result<VideoElement, Error>) -> Void) {
         
         guard let query = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return }
-        guard let url = URL(string: "\(Constants.YoutubeBase_URL)q=\(query)&key=\(Constants.YoutubeAPI_KEY)") else { return }
+        guard let url = URL(string: "\(Constants.Youtube_Base_URL)q=\(query)&key=\(Bundle.main.Youtube_API_KEY)") else { return }
         
         let task = URLSession.shared.dataTask(with: url) { data, _, error in
             
