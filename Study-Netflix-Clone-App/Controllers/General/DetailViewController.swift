@@ -13,7 +13,6 @@ class DetailViewController: UIViewController {
     private let webView: WKWebView = {
         let webView = WKWebView()
         webView.translatesAutoresizingMaskIntoConstraints = false
-        webView.backgroundColor = .brown
         
         return webView
     }()

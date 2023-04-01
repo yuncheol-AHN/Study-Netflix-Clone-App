@@ -1,3 +1,4 @@
 # file: .gitignore
 
 Secrets.plist
+Pods/

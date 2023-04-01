@@ -21,9 +21,8 @@ class DownloadsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         view.backgroundColor = .systemBackground
-        
+    
         title = "Download"
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.largeTitleDisplayMode = .always
@@ -33,6 +32,12 @@ class DownloadsViewController: UIViewController {
         tableView.dataSource = self
         
         fetchingFromLocalStorage()
+    }
+    
+    // 탭 이동 시 data reload
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(false)
+        viewDidLoad()
     }
     
     private func fetchingFromLocalStorage() {
