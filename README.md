@@ -45,7 +45,7 @@ How?
 
 |내용|기술|
 |-------|-------|
-의존성 라이브러리|CocoaPods
+의존성 라이브러리|CocoaPods -> Alamofire
 HTTP 통신|URLSession
 영화 정보 |TMDB API
 포스터 이미지|SDWebImage API
