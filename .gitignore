@@ -1,4 +1,4 @@
 # file: .gitignore
 
-Secrets.plist
 Pods/
+Secrets.plist
