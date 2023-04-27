@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "058979C3-7639-4448-8175-DFB022B1134B"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "78525EEF-6541-466C-BAB7-BF285F95B456"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Study-Netflix-Clone-App/APIManagers/APICaller.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
+            landmarkName = "getTopRatedMovies(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "78525EEF-6541-466C-BAB7-BF285F95B456 - 66864005792d9369"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Study_Netflix_Clone_App.APICaller.getTopRatedMovies(completion: (Swift.Result&lt;Swift.Array&lt;Study_Netflix_Clone_App.Title&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Study-Netflix-Clone-App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/an-yuncheol/MyProject/Study-Netflix-Clone-App/Study-Netflix-Clone-App/APIManagers/APICaller.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "133"
+                  endingLineNumber = "133"
+                  offsetFromSymbolStart = "1224">
+               </Location>
+               <Location
+                  uuid = "78525EEF-6541-466C-BAB7-BF285F95B456 - 37dd41388e6c3f2f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Study_Netflix_Clone_App.TitleResponse, Alamofire.AFError&gt;) -&gt; () in Study_Netflix_Clone_App.APICaller.getTopRatedMovies(completion: (Swift.Result&lt;Swift.Array&lt;Study_Netflix_Clone_App.Title&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Study-Netflix-Clone-App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/an-yuncheol/MyProject/Study-Netflix-Clone-App/Study-Netflix-Clone-App/APIManagers/APICaller.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "134"
+                  endingLineNumber = "134"
+                  offsetFromSymbolStart = "192">
+               </Location>
+               <Location
+                  uuid = "78525EEF-6541-466C-BAB7-BF285F95B456 - 37dd41388e6c3f4c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Study_Netflix_Clone_App.TitleResponse, Alamofire.AFError&gt;) -&gt; () in Study_Netflix_Clone_App.APICaller.getTopRatedMovies(completion: (Swift.Result&lt;Swift.Array&lt;Study_Netflix_Clone_App.Title&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Study-Netflix-Clone-App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/an-yuncheol/MyProject/Study-Netflix-Clone-App/Study-Netflix-Clone-App/APIManagers/APICaller.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "133"
+                  endingLineNumber = "133"
+                  offsetFromSymbolStart = "192">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1C2B55B7-B72D-46A6-BA71-28C7E081C027"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Study-Netflix-Clone-App/APIManagers/APICaller.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "getPopularMovies(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "39021A08-543A-42AF-9E20-BEB96E49E8FC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Study-Netflix-Clone-App/APIManagers/APICaller.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "getPopularMovies(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "39021A08-543A-42AF-9E20-BEB96E49E8FC - 79aab263e0df591e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Study_Netflix_Clone_App.TitleResponse, Alamofire.AFError&gt;) -&gt; () in Study_Netflix_Clone_App.APICaller.getPopularMovies(completion: (Swift.Result&lt;Swift.Array&lt;Study_Netflix_Clone_App.Title&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Study-Netflix-Clone-App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/an-yuncheol/MyProject/Study-Netflix-Clone-App/Study-Netflix-Clone-App/APIManagers/APICaller.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "120"
+                  endingLineNumber = "120"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  uuid = "39021A08-543A-42AF-9E20-BEB96E49E8FC - 79aab263e0df591e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Study_Netflix_Clone_App.TitleResponse, Alamofire.AFError&gt;) -&gt; () in Study_Netflix_Clone_App.APICaller.getPopularMovies(completion: (Swift.Result&lt;Swift.Array&lt;Study_Netflix_Clone_App.Title&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Study-Netflix-Clone-App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/an-yuncheol/MyProject/Study-Netflix-Clone-App/Study-Netflix-Clone-App/APIManagers/APICaller.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "120"
+                  endingLineNumber = "120"
+                  offsetFromSymbolStart = "268">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FF7E7735-EBF1-4AF8-B48B-2E90AA2D5B53"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Study-Netflix-Clone-App/APIManagers/APICaller.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "getTrendingMovies(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FF7E7735-EBF1-4AF8-B48B-2E90AA2D5B53 - 76afc4d283e750e4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in Study_Netflix_Clone_App.APICaller.getTrendingMovies(completion: (Swift.Result&lt;Swift.Array&lt;Study_Netflix_Clone_App.Title&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Study-Netflix-Clone-App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/an-yuncheol/MyProject/Study-Netflix-Clone-App/Study-Netflix-Clone-App/APIManagers/APICaller.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "212">
+               </Location>
+               <Location
+                  uuid = "FF7E7735-EBF1-4AF8-B48B-2E90AA2D5B53 - 76afc4d283e750e4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in Study_Netflix_Clone_App.APICaller.getTrendingMovies(completion: (Swift.Result&lt;Swift.Array&lt;Study_Netflix_Clone_App.Title&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Study-Netflix-Clone-App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/an-yuncheol/MyProject/Study-Netflix-Clone-App/Study-Netflix-Clone-App/APIManagers/APICaller.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "176">
+               </Location>
+               <Location
+                  uuid = "FF7E7735-EBF1-4AF8-B48B-2E90AA2D5B53 - 76afc4d283e750e4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in Study_Netflix_Clone_App.APICaller.getTrendingMovies(completion: (Swift.Result&lt;Swift.Array&lt;Study_Netflix_Clone_App.Title&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Study-Netflix-Clone-App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/an-yuncheol/MyProject/Study-Netflix-Clone-App/Study-Netflix-Clone-App/APIManagers/APICaller.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "192">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "75A1C799-7B90-45A1-8BBA-44525C4075DB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Study-Netflix-Clone-App/Controllers/Core/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "configureHeroHeaderView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7A163E15-26EE-4132-A4BD-6B45AC616762"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Study-Netflix-Clone-App/Controllers/Core/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7A163E15-26EE-4132-A4BD-6B45AC616762 - 7220bbecac0f0f38"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Study_Netflix_Clone_App.HomeViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "Study-Netflix-Clone-App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/an-yuncheol/MyProject/Study-Netflix-Clone-App/Study-Netflix-Clone-App/Controllers/Core/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "113"
+                  endingLineNumber = "113"
+                  offsetFromSymbolStart = "536">
+               </Location>
+               <Location
+                  uuid = "7A163E15-26EE-4132-A4BD-6B45AC616762 - 7220bbecac0f0f59"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Study_Netflix_Clone_App.HomeViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "Study-Netflix-Clone-App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/an-yuncheol/MyProject/Study-Netflix-Clone-App/Study-Netflix-Clone-App/Controllers/Core/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "112"
+                  endingLineNumber = "112"
+                  offsetFromSymbolStart = "536">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "32D67FCF-1F68-4AAD-B8B1-1F8D84E00E03"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Study-Netflix-Clone-App/Controllers/Core/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "74D060BC-392C-4935-BD65-6AD966D9A8DE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Study-Netflix-Clone-App/Controllers/Core/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5C1183BF-4820-4B10-B3B0-3D6E7EBE3585"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Study-Netflix-Clone-App/APIs/APICaller.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "getUpcomingMovies(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A72F2B4F-4605-4181-8E2A-76329E95F1BF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Study-Netflix-Clone-App/APIs/APICaller.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "getTrailerVideo(with:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BA5B093C-FD2C-40F7-A9F6-2C0F5A035EDE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Study-Netflix-Clone-App/APIs/APICaller.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "getTrailerVideo(with:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -8,11 +8,10 @@
 import UIKit
 
 enum Sections: Int {
-    case TrendingMovies = 0
-    case TrendingTvs = 1
+    case WeeklyTop10 = 0
+    case UpcomingMovies = 1
     case PopularMovies = 2
-    case UpcomingMovies = 3
-    case TopRatedMovies = 4
+    case TopRatedMovies = 3
 }
 
 class HomeViewController: UIViewController {
@@ -20,7 +19,7 @@ class HomeViewController: UIViewController {
     private var randomTrendingMovie: Title?
     private var headerView: HeaderUIView?
     
-    let moviesTitles: [String] = ["Trending Movies", "Trending Tv", "Popular", "Upcoming Movies", "Top Rated"]
+    let moviesTitles: [String] = ["Weekly Top 10", "Upcoming Movies", "Popular", "Top Rated"]
     
     private let homeFeedTable: UITableView = {
        
@@ -48,7 +47,7 @@ class HomeViewController: UIViewController {
     
     private func configureHeroHeaderView() {
         
-        APICaller.shared.getTrendingMovies { [weak self] result in
+        APICaller.shared.getTrendingAllWeekly { [weak self] result in
             switch result {
             case .success(let titles):
                 
@@ -112,9 +111,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         switch indexPath.section {
             
-        case Sections.TrendingMovies.rawValue:  // 0
+        case Sections.WeeklyTop10.rawValue:  // 0
             
-            APICaller.shared.getTrendingMovies { result in
+            APICaller.shared.getTrendingAllWeekly { result in
                 switch result {
                 case .success(let data):
                     cell.configure(with: data)
@@ -122,17 +121,18 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                     print(err)
                 }
             }
-        case Sections.TrendingTvs.rawValue: // 1
+        case Sections.UpcomingMovies.rawValue:  // 1
             
-            APICaller.shared.getTrendingTvs { result in
+            APICaller.shared.getUpcomingMovies { result in
                 switch result {
                 case .success(let data):
-                    print("trending tvs", data[0].original_title ?? "NONE")
+                    print("upcoming movies", data[0].original_title ?? "NONE")
                     cell.configure(with: data)
                 case .failure(let err):
                     print(err)
                 }
             }
+            
         case Sections.PopularMovies.rawValue:   // 2
             
             APICaller.shared.getPopularMovies { result in
@@ -144,18 +144,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                     print(err)
                 }
             }
-        case Sections.UpcomingMovies.rawValue:  // 3
-            
-            APICaller.shared.getUpcomingMovies { result in
-                switch result {
-                case .success(let data):
-                    print("upcoming movies", data[0].original_title ?? "NONE")
-                    cell.configure(with: data)
-                case .failure(let err):
-                    print(err)
-                }
-            }
-        case Sections.TopRatedMovies.rawValue:
+        
+        case Sections.TopRatedMovies.rawValue:  // 3
             
             APICaller.shared.getTopRatedMovies { result in
                 switch result {
