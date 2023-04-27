@@ -7,6 +7,7 @@ target 'Study-Netflix-Clone-App' do
 	pod 'SDWebImage', '~> 5.0'
   	pod 'SDWebImage/MapKit'
     pod 'Alamofire', '~> 5.6'
+    pod 'Moya', '~> 15.0'
   # Pods for Study-Netflix-Clone-App
 	
 end

@@ -91,7 +91,7 @@ extension UpcomingViewController: UITableViewDelegate, UITableViewDataSource {
         let title = titles[indexPath.row]
         guard let titleName = title.original_title ?? title.original_name else { return }
         
-        APICaller.shared.getMovie(with: titleName + " trailer") { [weak self] result in
+        APICaller.shared.getTrailerVideo(with: titleName + " trailer") { [weak self] result in
             
             switch result {
             case .success(let videoElement):

@@ -7,12 +7,6 @@
 
 import Foundation
 
-struct Constants {
-    
-    static let TMDB_base_URL = "https://api.themoviedb.org"
-    static let Youtube_Base_URL = "https://youtube.googleapis.com/youtube/v3/search?"
-}
-
 extension Bundle {
     
     var TMDB_API_KEY: String {

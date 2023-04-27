@@ -110,7 +110,7 @@ extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionVie
             return
         }
         
-        APICaller.shared.getMovie(with: titleName + " trailer") { [weak self] result in
+        APICaller.shared.getTrailerVideo(with: titleName + " trailer") { [weak self] result in
             
             switch result {
             case .success(let videoElement):

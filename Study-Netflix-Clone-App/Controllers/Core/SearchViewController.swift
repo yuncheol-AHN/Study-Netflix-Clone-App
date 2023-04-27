@@ -113,7 +113,7 @@ extension SearchViewController: UISearchResultsUpdating, SearchResultsViewContro
         
         resultController.delegate = self
         
-        APICaller.shared.search(with: query) { result in
+        APICaller.shared.searchMovies(with: query) { result in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let titles):
