@@ -46,7 +46,7 @@ How?
 |내용|기술|
 |-------|-------|
 의존성 라이브러리|CocoaPods
-HTTP 통신|URLSession -> Alamofire
+HTTP 통신|Moya
 영화 정보 |TMDB API
 포스터 이미지|SDWebImage API
 다운로드된 데이터|Core Data
